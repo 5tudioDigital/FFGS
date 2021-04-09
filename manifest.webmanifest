@@ -3,27 +3,27 @@
     "background_color": "#f0f0f0",
     "display": "standalone",
     "scope": "/",
-    "start_url": "/",
+    "start_url": "https://ffgs.webflow.io/",
     "name": "Freiwillige Feuerwehr Gro\u00df-Siegharts-Stadt",
     "short_name": "FF Gro\u00df-Siegharts",
     "icons": [
         {
-            "src": "/icon-192x192.png",
+            "src": "https://raw.githubusercontent.com/5tudioDigital/FFGS/main//icon-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/icon-256x256.png",
+            "src": "https://raw.githubusercontent.com/5tudioDigital/FFGS/main//icon-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "/icon-384x384.png",
+            "src": "https://raw.githubusercontent.com/5tudioDigital/FFGS/main//icon-384x384.png",
             "sizes": "384x384",
             "type": "image/png"
         },
         {
-            "src": "/icon-512x512.png",
+            "src": "https://raw.githubusercontent.com/5tudioDigital/FFGS/main//icon-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
