@@ -2,7 +2,7 @@
     "theme_color": "#b92e31",
     "background_color": "#f0f0f0",
     "display": "fullscreen",
-    "scope": "/",
+    "scope": "https://ffgs.webflow.io",
     "start_url": "https://ffgs.webflow.io/",
     "name": "Freiwillige Feuerwehr Gross-Siegharts-Stadt",
     "short_name": "Feuerwehr",
