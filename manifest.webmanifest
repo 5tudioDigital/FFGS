@@ -5,7 +5,7 @@
     "scope": "/",
     "start_url": "https://ffgs.webflow.io/",
     "name": "Freiwillige Feuerwehr Gross-Siegharts-Stadt",
-    "short_name": "Freiwillige Feuerwehr Gross-Siegharts-Stadt",
+    "short_name": "Feuerwehr",
     "icons": [
         {
             "src": "https://raw.githubusercontent.com/5tudioDigital/FFGS/main/icon-192x192.png",
