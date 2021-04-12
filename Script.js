@@ -23,10 +23,13 @@ document.getElementById("consentBtn").onclick = function () {
 }, 
     
 
+    
 document.getElementById("NoCookies").onclick = function () {
     nocookies()
-}, 
+};
     
+
+
 
 var AN_cookie = getCookie("AN_DS"),
     RE_cookie = getCookie("RE_DS"),
@@ -38,7 +41,6 @@ function checkSettings() {
     document.getElementById("RE_Check").checked ? setCookie("RE_DS", "true", 999) : setCookie("RE_DS", "false", 999), 
     location.reload()
 }
-
 
 
 function nocookies() {
