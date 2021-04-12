@@ -36,6 +36,15 @@ function checkSettings() {
     location.reload()
 }
 
+function deletecookies() {
+    for (var e = document.cookie.split(";"), t = 0; t < e.length; t++) {
+        var o = e[t].split("=");
+        document.cookie = o[0] + "=;expires=Thu, 21 Sep 1979 00:00:01 UTC;"
+    }
+    
+    localStorage.clear(), 
+    location.reload()
+}
 
 function nocookies() {
     deletecookies(), 
