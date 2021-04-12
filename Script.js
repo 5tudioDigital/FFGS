@@ -19,7 +19,7 @@ function setCookie(e, t, o) {
     
 document.getElementById("consentBtn").onclick = function () {
     window.localStorage.setItem("CB", "true"), checkSettings()
-}, 
+};
       
 document.getElementById("NoCookies").onclick = function () {
     nocookies()
@@ -60,7 +60,7 @@ function nocookies() {
     
 "false" == AN_cookie && (document.getElementById("AN_Check").checked = !1), 
 "false" == RE_cookie && (document.getElementById("RE_Check").checked = !1), 
-                                                                               
+                                                                              
     AN_cookie || (document.getElementById("AN_Check").checked = !0), 
     RE_cookie || (document.getElementById("RE_Check").checked = !0), 
 
