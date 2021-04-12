@@ -1,6 +1,6 @@
 var Webflow = Webflow || [];
 function getCookie(e) {
-    for (var t = a + "=", o = document.cookie.split(";"), c = 0; c < o.length; c++) {
+    for (var t = e + "=", o = document.cookie.split(";"), c = 0; c < o.length; c++) {
         for (var n = o[c];
             " " == n.charAt(0);) n = n.substring(1, n.length);
         if (0 == n.indexOf(t)) return n.substring(t.length, n.length)
