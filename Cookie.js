@@ -30,6 +30,10 @@ document.getElementById("DeleteCookies").onclick = function () {
 document.getElementById("NoCookies").onclick = function () {
     nocookies()
 };
+
+document.getElementById("NoCookiesSettings").onclick = function () {
+    nocookies()
+};
     
 
 
