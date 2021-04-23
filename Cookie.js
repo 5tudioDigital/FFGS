@@ -65,7 +65,7 @@ function nocookies() {
     setCookie("AN_DS", "false", 30), 
     setCookie("RE_DS", "false", 30), 
     setCookie("NOCO", "true", 30), 
-    window.localStorage.setItem("CB", "true"), 
+    window.localStorage.setItem("CB", "true", 30), 
     location.reload()
 }
 
