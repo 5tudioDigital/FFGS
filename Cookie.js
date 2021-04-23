@@ -21,8 +21,7 @@ function setCookie(e, t, o) {
 document.getElementById("consentBtn").onclick = function () {
     setCookie("CB", "true", 30), checkSettings()
 };
-    
-    
+        
 document.getElementById("DeleteCookies").onclick = function () {
     deletecookies()
 }; 
