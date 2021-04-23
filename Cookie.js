@@ -19,7 +19,7 @@ function setCookie(e, t, o) {
 
     
 document.getElementById("consentBtn").onclick = function () {
-    window.localStorage.setItem("CB", "true"), checkSettings()
+    setCookie("CB", "true", 30), checkSettings()
 };
     
     
@@ -39,7 +39,7 @@ document.getElementById("NoCookiesSettings").onclick = function () {
 
 var AN_cookie = getCookie("AN_DS"),
     RE_cookie = getCookie("RE_DS"),
-    alreadyLoaded = "true" === window.localStorage.getItem("CB");
+    alreadyLoaded = "true" === getCookie("CB");
 
 
 function checkSettings() {
@@ -65,7 +65,7 @@ function nocookies() {
     setCookie("AN_DS", "false", 30), 
     setCookie("RE_DS", "false", 30), 
     setCookie("NOCO", "true", 30), 
-    window.localStorage.setItem("CB", "true", 30), 
+    setCookie("CB", "true", 30)
     location.reload()
 }
 
