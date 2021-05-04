@@ -107,7 +107,7 @@ if(latestPost === latestPostCookie) {
             setCookie("sameLatest", 0, 30);
           break;
         default:
-            setCookie("sameLatest", 1, 30);
+            setCookie("sameLatest", 0, 30);
             console.log("sameLatest = 1");
           break;
       }
