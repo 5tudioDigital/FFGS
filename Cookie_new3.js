@@ -104,6 +104,7 @@ if(latestPost === latestPostCookie) {
         case "3":
             $('#MenuNewsletter').click(); 
             console.log("Newsletter");
+            setCookie("sameLatest", 0, 30);
           break;
         default:
             setCookie("sameLatest", 1, 30);
