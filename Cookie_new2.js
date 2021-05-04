@@ -93,16 +93,16 @@ var latestPostCookie = getCookie("LatestPost")
 if(latestPost === latestPostCookie) {
     var sameLatest = getCookie("sameLatest");
     switch (sameLatest) {
-        case 1:
+        case "1":
             setCookie("sameLatest", 2, 30);
             console.log("sameLatest = 2");
           break;
-        case 2:
+        case "2":
             setCookie("sameLatest", 3, 30);
             console.log("sameLatest = 3");
           break;
         ...
-        case 3:
+        case "3":
             console.log("XXXXXXXXXXXXXXXXXXXXXXXX");
           break;
         default:
