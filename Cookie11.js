@@ -93,10 +93,6 @@ var latestPostCookie = getCookie("LatestPost")
 if(latestPost === latestPostCookie) {
     var sameLatest = getCookie("sameLatest");
     switch (sameLatest) {
-        case "0":
-            setCookie("sameLatest", 1, 30);
-            console.log("sameLatest = 1");
-          break;
         case "1":
             setCookie("sameLatest", 2, 30);
             console.log("sameLatest = 2");
@@ -116,6 +112,6 @@ if(latestPost === latestPostCookie) {
       }
 } else {
     setCookie("LatestPost", latestPost, 30);
-    setCookie("sameLatest", 0, 30);
+    setCookie("sameLatest", 1, 30);
     console.log("Cookie SET");
 }
