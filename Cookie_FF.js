@@ -102,8 +102,8 @@ if(latestPost === latestPostCookie) {
             console.log("sameLatest = 3");
           break;
         case "3":
-            document.getElementById("NewsletterButton").click(); 
-            console.log("Newsletter");
+            document.getElementById("NotificationCenter").click(); 
+            console.log("NotificationCenter");
             setCookie("sameLatest", 0, 30);
           break;
         default:
