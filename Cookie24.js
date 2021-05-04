@@ -126,3 +126,7 @@ if(latestPost === latestPostCookie & NotificationCenter_1DayLock != "true" & Not
 $("#NotificationCenter_7DayLock").click(function(){
     setCookie("NotificationCenter_7DayLock", "true", 7);
 }); 
+
+$("#NotificationCenter_7DayLockClose").click(function(){
+    setCookie("NotificationCenter_7DayLock", "true", 7);
+}); 
