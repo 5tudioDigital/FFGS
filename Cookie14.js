@@ -88,11 +88,11 @@ alreadyLoaded ? document.getElementById("consentPopup").style.display = "none" :
 
 var latestPost = $('.section').find("a").attr('href');
 console.log(latestPost);
-setCookie("NotificationCenterShowed", false, 0.5);
+setCookie("NotificationCenterShowed", "false", 0.5);
 var latestPostCookie = getCookie("LatestPost");
 var getNotificationCenterStatus = getCookie("NotificationCenterShowed");
 
-if(latestPost === latestPostCookie & getNotificationCenterStatus === false) {
+if(latestPost === latestPostCookie & getNotificationCenterStatus === "false") {
     var sameLatest = getCookie("sameLatest");
     switch (sameLatest) {
         case "1":
@@ -111,17 +111,17 @@ if(latestPost === latestPostCookie & getNotificationCenterStatus === false) {
             document.getElementById("NotificationCenter").click(); 
             console.log("NotificationCenter");
             setCookie("sameLatest", 1, 30);
-            setCookie("NotificationCenterShowed", true, 0.5);
+            setCookie("NotificationCenterShowed", "true", 0.5);
           break;
         default:
             console.log("ERROR");
             setCookie("sameLatest", 1, 30);
-            setCookie("NotificationCenterShowed", false, 0.5);
+            setCookie("NotificationCenterShowed", "false", 0.5);
           break;
       }
 } else {
     setCookie("LatestPost", latestPost, 30);
     setCookie("sameLatest", 1, 30);
-    setCookie("NotificationCenterShowed", false, 0.5);
+    setCookie("NotificationCenterShowed", "false", 0.5);
     console.log("Cookie SET");
 }
