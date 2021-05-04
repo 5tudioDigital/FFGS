@@ -91,7 +91,7 @@ console.log(latestPost);
 var latestPostCookie = getCookie("LatestPost");
 var getNotificationCenterStatus = getCookie("NotificationCenterShowed");
 
-if(latestPost === latestPostCookie & getNotificationCenterStatus != "true") {
+if(latestPost === latestPostCookie & getNotificationCenterStatus !== "true") {
     var sameLatest = getCookie("sameLatest");
     switch (sameLatest) {
         case "1":
