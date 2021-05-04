@@ -91,8 +91,27 @@ console.log(latestPost);
 var latestPostCookie = getCookie("LatestPost")
 
 if(latestPost === latestPostCookie) {
-    setCookie("Same", 1, 30);
-    console.log("Same");
+    var sameLatest = getCookie("sameLatest");
+    switch (sameLatest) {
+        case 1:
+            setCookie("sameLatest", 2, 30);
+            console.log("sameLatest = 2");
+          break;
+        case 2:
+            setCookie("sameLatest", 3, 30);
+            console.log("sameLatest = 3");
+          break;
+        ...
+        case 3:
+            console.log("XXXXXXXXXXXXXXXXXXXXXXXX");
+          break;
+        default:
+            setCookie("sameLatest", 1, 30);
+            console.log("sameLatest = 1");
+          break;
+      }
+
+
 } else {
     setCookie("LatestPost", latestPost, 30);
     console.log("Cookie SET");
