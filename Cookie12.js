@@ -102,12 +102,17 @@ if(latestPost === latestPostCookie) {
             console.log("sameLatest = 3");
           break;
         case "3":
+            setCookie("sameLatest", 4, 30);
+            console.log("sameLatest = 4");
+          break;
+        case "4":
             document.getElementById("NotificationCenter").click(); 
             console.log("NotificationCenter");
             setCookie("sameLatest", 1, 30);
           break;
         default:
             console.log("ERROR");
+            setCookie("sameLatest", 1, 30);
           break;
       }
 } else {
