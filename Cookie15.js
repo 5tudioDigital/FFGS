@@ -88,15 +88,13 @@ alreadyLoaded ? document.getElementById("consentPopup").style.display = "none" :
 
 var latestPost = $('.section').find("a").attr('href');
 console.log(latestPost);
-setCookie("NotificationCenterShowed", "false", 0.5);
 var latestPostCookie = getCookie("LatestPost");
 var getNotificationCenterStatus = getCookie("NotificationCenterShowed");
 
-if(latestPost === latestPostCookie & getNotificationCenterStatus === "false") {
+if(latestPost === latestPostCookie & getNotificationCenterStatus != "true") {
     var sameLatest = getCookie("sameLatest");
     switch (sameLatest) {
         case "1":
-            setCookie("sameLatest", 2, 30);
             console.log("sameLatest = 2");
           break;
         case "2":
