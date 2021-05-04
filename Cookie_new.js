@@ -85,3 +85,15 @@ function nocookies() {
 
 
 alreadyLoaded ? document.getElementById("consentPopup").style.display = "none" : (document.getElementById("consentPopup").style.display = "block") 
+
+var latestPost = $('.section').find("a").attr('href');
+console.log(latestPost);
+var latestPostCookie = getCookie("LatestPost")
+
+if(latestPost === latestPostCookie) {
+    setCookie("Same", 1, 30);
+    console.log("Same");
+} else {
+    setCookie("LatestPost", latestPost, 30);
+    console.log("Cookie SET");
+}
