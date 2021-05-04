@@ -101,7 +101,6 @@ if(latestPost === latestPostCookie) {
             setCookie("sameLatest", 3, 30);
             console.log("sameLatest = 3");
           break;
-        ...
         case "3":
             console.log("XXXXXXXXXXXXXXXXXXXXXXXX");
           break;
