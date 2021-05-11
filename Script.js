@@ -29,12 +29,7 @@ document.getElementById("DeleteCookies").onclick = function () {
 document.getElementById("NoCookies").onclick = function () {
     nocookies()
 };
-
-document.getElementById("NoCookiesSettings").onclick = function () {
-    nocookies()
-};
-    
-
+   
 
 var AN_cookie = getCookie("AN_DS"),
     RE_cookie = getCookie("RE_DS"),
