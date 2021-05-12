@@ -79,7 +79,7 @@ function nocookies() {
     RE_cookie || (document.getElementById("RE_Check").checked = !0), 
 
 
-alreadyLoaded ? document.getElementById("consentPopup").style.display = "none" : (document.getElementById("consentPopup").style.display = "block") 
+alreadyLoaded ? console.log("Cookie Banner Shown") : (document.getElementById("consentPopup").style.display = "block") 
 
 var latestPost = $('.section').find("a").attr('href');
 console.log(latestPost);
