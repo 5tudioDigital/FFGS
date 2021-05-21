@@ -121,3 +121,13 @@ $("#NotificationCenter_7DayLock").click(function(){
 $("#NotificationCenter_7DayLockClose").click(function(){
     setCookie("NotificationCenter_7DayLock", "true", 7);
 }); 
+
+$("#fullpage-off").click(function(){
+    $.fn.fullpage.destroy('all');
+    setCookie("Fullpage", "false", 30);
+  });
+
+  var FullpageOff = getCookie("Fullpage");
+if(FullpageOff = "false") {
+    $.fn.fullpage.destroy('all');
+}
