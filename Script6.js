@@ -132,7 +132,7 @@ fullpageOffID.addEventListener("keyup", function(event) {
         setCookie("Fullpage", "deaktiviert", 30);
         fullpageOffID.style.opacity = "0";
       }
-      else(){
+      else{
         $.fn.fullpage.rebuild();
         setCookie("Fullpage", "aktiviert", 30);
         fullpageOffID.style.opacity = "0";
