@@ -122,11 +122,12 @@ $("#NotificationCenter_7DayLockClose").click(function(){
     setCookie("NotificationCenter_7DayLock", "true", 7);
 }); 
 
-$('#fullpage-off').on('click keydown touchend', function(e) {
-    if (e.type === "keydown" && e.which !== 13) {
-        $.fn.fullpage.destroy('all');
-        setCookie("Fullpage", "false", 30);
-     }
+$('#fullpage-off').addEventListener("keyup", function(event) {
+
+  if (event.keyCode === 13) {
+    $.fn.fullpage.destroy('all');
+    setCookie("Fullpage", "false", 30);
+  }
 });
 
 var FullpageOff = getCookie("Fullpage");
