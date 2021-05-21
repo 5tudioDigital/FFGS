@@ -59,7 +59,7 @@ function nocookies() {
     setCookie("AN_DS", "false", 30), 
     setCookie("RE_DS", "false", 30), 
     setCookie("NOCO", "true", 30), 
-    setCookie("CB", "true", 30)
+    setCookie("CB", "true", 30),
     location.reload()
 }
 
@@ -121,27 +121,3 @@ $("#NotificationCenter_7DayLock").click(function(){
 $("#NotificationCenter_7DayLockClose").click(function(){
     setCookie("NotificationCenter_7DayLock", "true", 7);
 }); 
-
-var fullpageOffID = document.getElementById("fullpage-off");
-var FullpageOff = getCookie("Fullpage");
-
-fullpageOffID.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-      if(FullpageOff === "deaktiviert") {
-        $.fn.fullpage.reBuild();
-        setCookie("Fullpage", "aktiviert", 30);
-        fullpageOffID.style.opacity = "0";
-      }
-      else{
-        $.fn.fullpage.destroy('all');
-        setCookie("Fullpage", "deaktiviert", 30);
-        fullpageOffID.style.opacity = "0";
-      }
-   
-  }
-});
-
-if(FullpageOff === "deaktiviert") {
-    console.log("Fullpage Destroyed");
-    $.fn.fullpage.destroy('all');
-}
