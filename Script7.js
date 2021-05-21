@@ -123,15 +123,24 @@ $("#NotificationCenter_7DayLockClose").click(function(){
 }); 
 
 var fullpageOffID = document.getElementById("fullpage-off");
+var FullpageOff = getCookie("Fullpage");
 
 fullpageOffID.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
-    $.fn.fullpage.destroy('all');
-    setCookie("Fullpage", "deaktiviert", 30);
+      if(FullpageOff === "deaktiviert") {
+        $.fn.fullpage.destroy('all');
+        setCookie("Fullpage", "deaktiviert", 30);
+        fullpageOffID.style.opacity = "0";
+      }
+      else{
+        $.fn.fullpage.rebuild();
+        setCookie("Fullpage", "aktiviert", 30);
+        fullpageOffID.style.opacity = "0";
+      }
+   
   }
 });
 
-var FullpageOff = getCookie("Fullpage");
 if(FullpageOff === "deaktiviert") {
     console.log("Fullpage Destroyed");
     $.fn.fullpage.destroy('all');
