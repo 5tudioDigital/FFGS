@@ -132,6 +132,7 @@ fullpageOffID.addEventListener("keyup", function(event) {
 });
 
 var FullpageOff = getCookie("Fullpage");
-if(FullpageOff = "deaktiviert") {
+if(FullpageOff === "deaktiviert") {
+    console.log("Fullpage Destroyed");
     $.fn.fullpage.destroy('all');
 }
