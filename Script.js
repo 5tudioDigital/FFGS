@@ -93,16 +93,19 @@ if(latestPost === latestPostCookie & NotificationCenter_1DayLock != "true" & Not
         case "1":
             setCookie("sameLatest", 2, 30);
             console.log("sameLatest = 2");
+            ga('send', 'event', 'Notification Center INDEX', '2');
           break;
         case "2":
             setCookie("sameLatest", 3, 30);
             console.log("sameLatest = 3");
+            ga('send', 'event', 'Notification Center INDEX', '3');
           break;
         case "3":
             document.getElementById("NotificationCenter").click(); 
             console.log("Notification Center");
             setCookie("sameLatest", 1, 30);
             setCookie("NotificationCenter_1DayLock", "true", 1);
+            ga('send', 'event', 'Notification Center INDEX', 'Shown');
           break;
         default:
             console.log("ERROR Notfication Center");
@@ -112,6 +115,7 @@ if(latestPost === latestPostCookie & NotificationCenter_1DayLock != "true" & Not
 } else {
     setCookie("LatestPost", latestPost, 30);
     setCookie("sameLatest", 1, 30);
+    ga('send', 'event', 'Notification Center INDEX', '1');
 }
 
 $("#NotificationCenter_7DayLock").click(function(){
