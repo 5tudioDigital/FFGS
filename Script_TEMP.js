@@ -37,8 +37,8 @@ var AN_cookie = getCookie("AN_DS"),
 
 
 function checkSettings() {
-    document.getElementById("AN_Check").checked ? setCookie("AN_DS", "true", 30) : setCookie("AN_DS", "false", 30), 
-    document.getElementById("RE_Check").checked ? setCookie("RE_DS", "true", 30) : setCookie("RE_DS", "false", 30), 
+    document.getElementById("AN_Check").checked ? setCookie("AN_DS", "true", 90) : setCookie("AN_DS", "false", 90), 
+    document.getElementById("RE_Check").checked ? setCookie("RE_DS", "true", 90) : setCookie("RE_DS", "false", 90), 
     location.reload()
 }
 
@@ -48,7 +48,7 @@ function deletecookies() {
         var o = e[t].split("=");
         document.cookie = o[0] + "=;expires=Thu, 21 Sep 1979 00:00:01 UTC;"
     }
-    setCookie("CB", "false", 30)
+    setCookie("CB", "false", 90)
     localStorage.clear(), 
     location.reload()
 }
@@ -56,10 +56,10 @@ function deletecookies() {
 
 function nocookies() {
     deletecookies(), 
-    setCookie("AN_DS", "false", 30), 
-    setCookie("RE_DS", "false", 30), 
-    setCookie("NOCO", "true", 30), 
-    setCookie("CB", "true", 30),
+    setCookie("AN_DS", "false", 90), 
+    setCookie("RE_DS", "false", 90), 
+    setCookie("NOCO", "true", 90), 
+    setCookie("CB", "true", 90),
     location.reload()
 }
 
