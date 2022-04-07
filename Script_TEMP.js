@@ -32,13 +32,11 @@ document.getElementById("NoCookies").onclick = function () {
    
 
 var AN_cookie = getCookie("AN_DS"),
-    RE_cookie = getCookie("RE_DS"),
     alreadyLoaded = "true" === getCookie("CB");
 
 
 function checkSettings() {
     document.getElementById("AN_Check").checked ? setCookie("AN_DS", "true", 90) : setCookie("AN_DS", "false", 90), 
-    document.getElementById("RE_Check").checked ? setCookie("RE_DS", "true", 90) : setCookie("RE_DS", "false", 90), 
     location.reload()
 }
 
@@ -57,7 +55,6 @@ function deletecookies() {
 function nocookies() {
     deletecookies(), 
     setCookie("AN_DS", "false", 90), 
-    setCookie("RE_DS", "false", 90), 
     setCookie("NOCO", "true", 90), 
     setCookie("CB", "true", 90),
     location.reload()
@@ -66,17 +63,14 @@ function nocookies() {
 
 
 "true" == AN_cookie && (document.getElementById("AN_Check").checked = !0), 
-"true" == RE_cookie && (document.getElementById("RE_Check").checked = !0), 
 
     
     
 "false" == AN_cookie && (document.getElementById("AN_Check").checked = !1), 
-"false" == RE_cookie && (document.getElementById("RE_Check").checked = !1), 
 
 
                                                                                
     AN_cookie || (document.getElementById("AN_Check").checked = !0), 
-    RE_cookie || (document.getElementById("RE_Check").checked = !0), 
 
 
 alreadyLoaded ? console.log("Cookie Banner Shown") : $('#CookieButton').click(); 
